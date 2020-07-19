@@ -3,31 +3,67 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./lib/p5.js"></script>
+    <script src="./lib/p5.sound.min.js"></script>
     <link
       rel="stylesheet"
       href="https://bootswatch.com/4/darkly/bootstrap.min.css"
     />
+    <style>
+      canvas {
+        margin: 0 auto;
+        border-radius: 10px;
+        border: 5px dashed lightblue;
+        display: block;
+      }
+      button.clearButton {
+        display: block;
+        margin: 0 auto;
+        margin-top: 10px;
+      }
+    </style>
+
     <title>Digitizer</title>
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-5">
       <div class="container">
         <a href="#" class="navbar-brand">DIGITIZER 🧮</a>
-        <a href="https://github.com/MidhaTahir" target="_blank" class="text-light">Made by Mids-Hashy💻</a>
+        <a
+          href="https://github.com/MidhaTahir"
+          target="_blank"
+          class="text-light"
+          >Made by Mids-Hashy💻</a
+        >
       </div>
     </nav>
 
     <div class="container uicontainer">
       <form id="form" method="POST" enctype="multipart/form-data" action="#">
-        <input type="file" name="image" id="image" class="text-info" />
-        <button class="btn btn-primary btn-lg" id="submit" type="submit">
-          Submit
-        </button>
+        <div class="form-group">
+          <div class="input-group mb-3">
+            <div class="custom-file">
+              <input
+                type="file"
+                name="image-file"
+                id="image-file"
+                class="custom-file-input"
+              />
+              <label class="custom-file-label" for="image-file"
+                >Choose file</label
+              >
+            </div>
+            <div class="input-group-append">
+              <span class="input-group-text" id="submit" type="submit"
+                >Submit</span
+              >
+            </div>
+          </div>
+        </div>
       </form>
     </div>
-
-    <div id="result"></div>
-
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <script src="sketch.js"></script>
     <script src="./app.js"></script>
   </body>
 </html>

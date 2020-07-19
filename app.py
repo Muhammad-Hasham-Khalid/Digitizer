@@ -12,10 +12,15 @@ model = load_model("./model/trained_model.h5")
 @app.route("/", methods=['POST'])
 def index():
     if request.method == 'POST':
-        image = Image.open(request.files['image']).convert('L')
-        npImage = np.array(image)
-        res = np.argmax(model.predict(npImage.reshape(-1, 784)))
-        return f"Result : {res}"
+        try:
+            image = Image.open(request.files.get('image-file')).convert('L')
+            npImage = np.array(image)
+            res = np.argmax(model.predict(npImage.reshape(-1, 784)))
+            return f"{res}"
+        except Exception as e:
+            print(e)
+            return "Error"
+            
 
 if __name__ == '__main__':
     app.run(debug=True, port=5000)
