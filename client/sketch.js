@@ -7,8 +7,8 @@ function setup() {
   eraser.addClass("btn btn-primary btn-lg clearButton");
   saver = createButton("Saving Image");
   saver.mousePressed(convertToImage);
-  c = color(0);
-  background(255);
+  c = color(255);
+  background(0);
   colorMode(RGB);
 
   // saving canvas function
@@ -22,13 +22,13 @@ function setup() {
 
   // erasing the canvas
   function changeBG() {
-    background(255);
+    background(0);
   }
 }
 
 function mouseDragged() {
   stroke(c);
-  strokeWeight(10);
+  strokeWeight(20);
   if (mouseX < 500) {
     line(mouseX, mouseY, pmouseX, pmouseY);
   }

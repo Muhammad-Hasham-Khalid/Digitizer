@@ -14,7 +14,10 @@ def index():
     if request.method == 'POST':
         try:
             image = Image.open(request.files.get('image-file')).convert('L')
+            newsize = (28, 28) 
+            image = image.resize(newsize) 
             npImage = np.array(image)
+            npImage = npImage.astype('float32') / 255
             res = np.argmax(model.predict(npImage.reshape(-1, 784)))
             return f"{res}"
         except Exception as e:
