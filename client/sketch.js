@@ -1,8 +1,14 @@
 let pixelData = null;
 let isDrawn = false;
+let canvas;
 
 function setup() {
-  const canvas = createCanvas(400, 400);
+  // For smaller screens
+  if (windowWidth < 403) {
+    canvas = createCanvas(windowWidth, windowWidth);
+  } else {
+    canvas = createCanvas(400, 400);
+  }
   cursor(CROSS);
 
   btnContainer = createDiv();
@@ -69,12 +75,11 @@ function uiAlert(message, className) {
   let div = document.createElement("div");
   div.className = className;
   div.appendChild(document.createTextNode(message));
-  let container = document.querySelector(".uicontainer");
-  let parent = document.querySelector("#form");
-  container.insertBefore(div, parent);
+  let parent = document.querySelector("div.notifications");
+  parent.appendChild(div);
   setTimeout(function () {
     document.querySelector(".alert").remove();
-  }, 3000);
+  }, 2000);
 }
 
 // saving canvas function
