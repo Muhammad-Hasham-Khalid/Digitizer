@@ -1,3 +1,4 @@
+let pixelData = null;
 const submitBtn = document.getElementById("submit");
 const form = document.getElementById("form");
 
@@ -5,7 +6,9 @@ submitBtn.addEventListener("click", fetchResult);
 
 async function fetchResult(e) {
   e.preventDefault();
+  convertToImage();
   const fData = new FormData(form);
+  fData.append("pixels", pixelData);
   try {
     let data = await fetch("http://127.0.0.1:5000/", {
       method: "POST",
