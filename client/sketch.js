@@ -39,7 +39,7 @@ async function fetchResult(e) {
   if (isDrawn) {
     fData.append("pixels", pixelData);
     try {
-      let data = await fetch("http://127.0.0.1:5000/", {
+      let data = await fetch("https://digitizer-app.herokuapp.com", {
         method: "POST",
         body: fData,
       });

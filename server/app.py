@@ -3,10 +3,12 @@ from flask_cors import CORS
 from PIL import Image
 import numpy as np
 from tensorflow.keras.models import load_model
-from os import path   # for creating path
+from os import path, environ   # for creating path
 from os import getcwd # for getting current working dir
 from json import loads
 from math import sqrt
+
+PORT = int(environ.get("PORT") or 5000)
 
 app = Flask(__name__)
 CORS(app)
@@ -32,4 +34,4 @@ def index():
             return "Error"
 
 if __name__ == '__main__':
-    app.run(debug=True, port=5000)
+    app.run(host='0.0.0.0', port=PORT)
