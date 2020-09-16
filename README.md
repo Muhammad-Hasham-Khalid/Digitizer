@@ -23,6 +23,3 @@
 ### ⚡ Give it a Star ⭐
 
 > Feel free to contribute. Make a PR 🚀
-
-[![GitHub stars](https://img.shields.io/github/stars/Muhammad-Hasham-Khalid/Digitizer.svg?style=social&label=Star&maxAge=2592000)](https://github.com/Muhammad-Hasham-Khalid/Digitizer/stargazers/)
-[![GitHub forks](https://img.shields.io/github/forks/Muhammad-Hasham-Khalid/Digitizer.svg?style=social&label=Fork&maxAge=2592000)](https://github.com/Muhammad-Hasham-Khalid/Digitizer/network/)
