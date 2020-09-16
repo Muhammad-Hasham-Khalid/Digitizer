@@ -23,3 +23,9 @@
 ### ⚡ Give it a Star ⭐
 
 > Feel free to contribute. Make a PR 🚀
+
+### ⚡ Links
+
+- App preview (deployed on netlify): https://digitizer-app.netlify.app/
+- API deployed on Heroku: https://digitizer-app.herokuapp.com/
+- Android APK Link: https://files.appsgeyser.com/Digitizer_12195898.apk
