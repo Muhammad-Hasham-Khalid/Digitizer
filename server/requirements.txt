@@ -13,7 +13,7 @@ decorator==4.4.2
 distlib==0.3.0
 distro==1.4.0
 Flask==1.1.2
-Flask-Cors==3.0.8
+Flask-Cors==3.0.9
 gast==0.3.3
 google-auth==1.19.2
 google-auth-oauthlib==0.4.1
