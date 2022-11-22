@@ -39,7 +39,7 @@ oauthlib==3.1.0
 opt-einsum==3.2.1
 packaging==20.3
 pep517==0.8.2
-Pillow==8.1.1
+Pillow==9.3.0
 progress==1.5
 protobuf==3.12.2
 pyasn1==0.4.8
